@@ -10,7 +10,7 @@ public class GeradorDeArquivo {
 
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
-        FileWriter escrita = new FileWriter("endereco.json");
+        FileWriter escrita = new FileWriter(endereco.cep()+".json");
         escrita.write(gson.toJson(endereco));
         escrita.close();
     }
